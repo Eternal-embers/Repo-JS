@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+	/* 输出数据并换行 */
+	function put(value){
+		if(value === null) {
+			document.write("null<br/>");
+		}
+		else if(value == ""){
+			document.write("空字符串<br/>");
+		}
+		else document.write(value + "<br/>");
+	}
+	/* 输出分割线 */
+	function line(){
+		document.write("- - - - - - - - - - - - - - - - - - - - - - - -<br/>");
+	}
+	var value = ["hello,world","",3.1415926,null,undefined];
+	for(var key in value)
+		put(value[key]);
+	var len = value.length;
+	put("len = " + len);
+	line();
+	for(var i = 0;i < len;i++)
+		put(value[i]);
+	line();
+	for(let i = 0;i < len;i++)
+		put(value[i]);
+	document.write(typeof 3.14);
+	document.write(typeof "string");
+	document.write(typeof "");
+	document.write(typeof null);
+	document.write(typeof undefined);
+	document.write(typeof []);
+</script>
+</body>
+</html>

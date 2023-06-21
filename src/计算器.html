@@ -1,0 +1,34 @@
+<!DOCTYPE>
+<html>
+<body>
+<button onclick="menu()">启动</button>
+<button onclick="input()">输入</button>
+</body>
+<script>
+/*
+	记录数据的方法：console.log();	document.write();
+	手动输入数据的方法:
+	prompt(); 会有输入框可以用于输入数据，返回值为用户输入的数据
+	confirm(); 有确定和取消两个选项，分别返回ture或false
+	弹窗 alert();
+*/
+
+function menu(){
+	/* 
+		\n在document.write中只起到空格的作用,使用<br/>换行,&nbsp;为空格
+		在alert()中\r和\n可以起到换行的作用
+	*/
+	alert("欢迎使用计算器!\r制作人：劣等生\n制作时间：2023/6/20");
+	document.write("&nbsp;&nbsp;&nbsp;&nbsp;>>>计算器<<<<br/>");
+	document.write("&nbsp;&nbsp;&nbsp;&nbsp;退出- - - - - - -0<br/>");
+	document.write("&nbsp;&nbsp;&nbsp;&nbsp;加法- - - - - - -1<br/>");
+	document.write("&nbsp;&nbsp;&nbsp;&nbsp;减法- - - - - - -2<br/>");
+	document.write("&nbsp;&nbsp;&nbsp;&nbsp;乘法- - - - - - -3<br/>");
+	document.write("&nbsp;&nbsp;&nbsp;&nbsp;除法- - - - - - -5<br/>");
+}
+function input(){
+	var input=prompt();
+	document.write(input);
+}
+</script>
+</html>

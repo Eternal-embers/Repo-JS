@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+	var person = {
+		firstName: "Bill",
+		lastName:"Gates",
+		fullName: function toString() {
+			return this.firstName + this.lastName;
+		}
+	};
+	document.write(person.firstName);
+	document.write(person.lastName);
+	document.write("<br/>");
+	document.write(person.fullName());
+</script>
+</body>
+</html>

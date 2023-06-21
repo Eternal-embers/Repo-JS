@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+	var str = "hello,world";//定义字符串
+	/* 查找字符串 */
+	document.write("o第一次出现在hello,world中的索引是" + str.indexOf("o"));
+	document.write("<br/>");//换行
+	document.write("o最后一次出现在hello,world的索引是" + str.lastIndexOf("o"));
+	document.write("<br/>");//换行
+	document.write("hello,world字符串的长度是" + str.length);
+	document.write("<br/>");//换行
+	document.write("world第一次出现在hello,world字符串中的位置是" + str.search("world"));
+	document.write("<br/>");//换行
+	/* 分割字符串 */
+	document.write("提取字符串hello,world中起始索引为6之后的全部字符串：" + str.slice(6));
+	document.write("<br/>");//换行
+	document.write("提取字符串hello,world中起始字符串开始索引3到结尾索引6的字符串：" + str.slice(3,6));
+	document.write("<br/>");//换行
+	document.write("提取字符串hello,world后5个字符组成的字符串：" + str.slice(-5));
+	document.write("<br/>");//换行
+	document.write("提取字符串hello,world开始5个字符组成的字符串：" + str.substring(0,5));
+	document.write("<br/>");//换行
+	document.write("将hello,world中的world替换成JavaScript" + "hello,world".replace("world","JavaScript"));
+	document.write("<br/>");//换行
+	/* 大小写转换 */
+	document.write("将hello,world转换成大写：" + str.toUpperCase());
+	document.write("<br/>");//换行
+	document.write("将Hello,Wrold转换成小写：" + "Hello,World".toLowerCase());
+	document.write("<br/>");//换行
+	/* 拼接字符串 */
+	document.write("将hello和world合并：" +  "hello".concat("world"));
+	document.write("<br/>");//换行
+	document.write("将'Nice '、'to '、'meet '、you四个字符串合并：" + "Nice ".concat("to ","meet ","you"));
+	document.write("<br/>");//换行
+	/* 获取字符中的某个字符串 */
+	document.write("获取字符串hello,world中的第6个字符：" + str.charAt(6));
+	document.write("<br/>");
+	/* 字符串转数组 */
+	document.write("将字符串'a,b,c,d,e,f'转换成数组后取第4个元素：" + 'a,b,c,d,e,f'.split(",")[3]);
+	document.write("<br/>");//换行
+	document.write("将字符串'a,b,c,d,e,f'转换成数组后遍历输出：");
+	var arr = 'a,b,c,d,e,f'.split(',');
+	for(let key in arr)
+		document.write(arr[key]);
+	document.write("<br/>");//换行
+	/* 字符串匹配 */
+	document.write("hello,world是否以hello开头：" + str.startsWith("hello"));
+	document.write("<br/>");//换行
+	document.write("hello,world是否以world结尾：" + str.endsWith("world"));
+	document.write("<br/>");//换行
+	document.write("hello,world是否包括or：" + str.includes("or"));
+	document.write("<br/>");//换行
+</script>
+</body>
+</html>

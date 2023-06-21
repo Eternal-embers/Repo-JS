@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+<div>
+<span>计算1+2+3+...+1000=</span>
+<span id="id1">?</span>
+</div>
+<br/>
+<button type="button" onclick="caculate()">查看结果</button>
+<button type="button" onclick="hide()">隐藏结果</button>
+<p id="id2">
+</p>
+<script>
+	function caculate(){
+		var res = 0;
+		for(var i = 0;i < 1000;i++)
+			res += i;
+		document.getElementById("id1").innerHTML =  res;
+	}
+	function hide(){
+		document.getElementById("id1").innerHTML = '?';
+	}
+</script>
+<script>
+</body>
+</html>

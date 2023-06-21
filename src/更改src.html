@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<img id="picture" src="../picture-src/picture1.jpg" alt="picture" width="518px" height="674px"/>
+<br/>
+<button onclick="picture1()">下一张</button>
+
+<script>
+function picture1(){
+	var image = document.getElementById('picture');
+	if(image.src.match("../picture-src/picture1.jpg")){
+		image.src = "../picture-src/picture2.png";
+		image.width = 525;
+		image.height = 388;
+	}
+	else if(image.src.match("../picture-src/picture2.png")){
+		image.src = "../picture-src/picture3.jpg";
+		image.width = 600;
+		image.height = 848;
+	}
+	else if(image.src.match("../picture-src/picture3.jpg")){
+		image.src = "../picture-src/picture1.jpg";
+		image.width = 518;
+		image.height = 674;
+	}
+}
+</script>
+</body>
+</html>

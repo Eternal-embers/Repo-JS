@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+	document.write(1/0);//输出infinity
+	document.write("<br/>");//换行
+	document.write(typeof infinity);//输出number
+	document.write("<br/>");//换行
+	document.write(isNaN("100"));//返回false,"100"是数字
+	document.write("<br/>");//换行
+	document.write(isNaN("hello"));//返回true，hello不是数字
+	document.write("<br/>");//换行
+	//进制转换
+	var num = 128;
+	document.write(num.toString(16));//十进制数128转16进制
+	document.write("<br/>");//换行
+	document.write(num.toString(8));//十进制数128转8进制
+	document.write("<br/>");//换行
+	document.write(num.toString(4));//十进制数128转4进制
+	document.write("<br/>");//换行
+	document.write(num.toString(2));//十进制数128转2进制
+	document.write("<br/>");//换行
+</script>
+</body>
+</html>

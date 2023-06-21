@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<body>
+<pre>
+JavaScript 的数据类型，共有六种。
+数值（number）：整数和小数（比如1和3.14）。
+字符串（string）：文本（比如Hello World）。
+布尔值（boolean）：表示真伪的两个特殊值，即true（真）和false（假）。
+undefined：表示“未定义”或不存在，即由于目前没有定义，所以此处暂时没有任何值。
+null：表示空值，即此处的值为空。
+对象（object）：各种值组成的集合。
+</pre>
+<p id="id1"></p>
+<p id="id2"></p>
+<p id="id3"></p>
+<p id="id4"></p>
+<p id="id5"></p>
+<pre id="id6"></pre>
+<script>
+	function put(value){
+		document.write(value);
+	}
+	var str1 = "hello，world！";//将字符串hello，world！赋值给str1
+	var str2 = "";//将空字符串赋值给str2变量
+	var value1 = undefined;//将undefined赋值给value1
+	var value2 = null;//将null赋值给value2变量
+	var f = 3.1415926;//将浮点数3.1415926赋值给f变量
+	var fun = put;//将put函数对象赋值给fun变量
+	document.getElementById("id1").innerHTML=str1;
+	document.getElementById("id2").innerHTML=str2;
+	document.getElementById("id3").innerHTML=value1;
+	document.getElementById("id4").innerHTML=value2;
+	document.getElementById("id5").innerHTML=f;
+	document.getElementById("id6").innerHTML=fun;
+</script>
+</body>
+</html>
