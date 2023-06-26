@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<!--通过HTML5的文件选择器获取目录-->
+<input type="file" id="dirInput" directory multiple webkitdirectory mozdirectory />
+
+</html>
+<script>
+    /* 获取目录 */
+    const dirInput = document.getElementById("dirInput");
+
+    dirInput.addEventListener("change", function (e) {
+        const files = e.target.files;
+        for (let i = 0; i < files.length; i++) {
+            const file = files[i];
+            console.log(file);
+            document.write(file.name + "——" + file.size + "——" + file.type + "——" + file.lastModifiedDate + "<br/>");//获取文件名称
+        }
+    });
+</script>
