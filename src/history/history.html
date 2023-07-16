@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.css" />
+</head>
+
+<body>
+    <i class="fa-sharp fa-solid fa-arrow-left" onclick="history.back()"></i>
+    <i class="fa-sharp fa-solid fa-arrow-right" onclick="history.forward()"></i>
+    <br />
+    <i class="fa-solid fa-rotate-right" onclick="assign1()"></i>
+    <i onclick="assign2()">&#10227</i>
+    <br />
+    <a href="page1.html">page1</a>
+</body>
+<script>
+    function assign1() {
+        location.assign("http://www.edddh.com");
+    }
+    function assign2() {
+        var option = confirm("您即将进入成人网站,是否确定进入？")
+        if (option)
+            location.assign("http://www.azaz98.com");
+        else
+            alert("已取消进入成人网站");
+    }
+</script>
+
+</html>

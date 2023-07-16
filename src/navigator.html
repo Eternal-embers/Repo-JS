@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <p id="navigator"></p>
+</body>
+<script>
+    var visitorInfo;
+    var cookieEnabled = "cookieEnabled:" + navigator.cookieEnabled + "<br/>";
+    var appName = "appName:" + navigator.appName + "<br/>";
+    var appCodeName = "appCodeName:" + navigator.appCodeName + "<br/>";
+    var userAgenet = "userAgenet:" + navigator.userAgent + "<br/>";
+    var platform = "platform:" + navigator.platform + "<br/>";
+    var language = "language:" + navigator.language + "<br/>";
+    var onLine = "onLine:" + navigator.onLine + "<br/>";
+    var javaEnabled = "javaEnabled:" + navigator.javaEnabled() + "<br/>";
+    visitorInfo = cookieEnabled + appName + appCodeName + userAgenet + platform + language + onLine + javaEnabled;
+    document.getElementById("navigator").innerHTML = visitorInfo;
+</script>
+
+</html>

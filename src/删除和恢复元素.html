@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+	p{
+		border:1px solid black; 
+		height:20px;	
+		width:1000px;
+		margin: 5px;
+		padding: 5px;
+		text-align:center;
+		font-size:18px;
+		font-family: STKaiti;
+	}
+   .clickable-paragraph {
+		color: red;
+	}
+	.clickable-paragraph:hover {
+		color: blue;
+	}
+</style>
+</head>
+<body>
+
+<button onclick="this.style.display='none'" id="1"> 删除按钮1</button>
+<button onclick="this.style.display='none'" id="2"> 删除按钮2</button>
+<button onclick="this.style.display='none'" id="3"> 删除按钮3</button>
+<button onclick="this.style.display='none'" id="4"> 删除按钮4</button>
+<br/>
+<button onclick="document.getElementById('1').style.display = 'inline'">
+显示按钮1
+</button>
+<button onclick="document.getElementById('2').style.display = 'inline'"> 
+显示按钮2
+</button>
+<button onclick="document.getElementById('3').style.display = 'inline'">
+显示按钮3
+</button>
+<button onclick="document.getElementById('4').style.display = 'inline'"> 
+显示按钮4
+</button>
+
+<br/><br/>
+
+<p id = "飞龙宝宝"  class="clickable-paragraph" onclick ="func1()">飞龙宝宝的故事</p>
+<p id = "哥布林"  class="clickable-paragraph" onclick ="func2()">哥布林的故事</p>
+
+</body>
+<script>
+var cnt = 0;
+var 飞龙宝宝 = 
+[
+"飞龙宝宝的故事",
+"飞龙宝宝是一只可爱的小龙，它出生在一个古老的龙族家庭。",
+"它的父母是著名的飞龙战士，它们保护着整个龙族的领地，抵御着敌人的入侵。",
+"飞龙宝宝很快就展现出了它的战斗天赋和智慧。",
+"它学会了如何使用它的翅膀和牙齿来攻击敌人，并且很快就掌握了飞行的技巧。",
+"它还学会了如何使用它的智慧来解决问题，并且在很小的时候就开始帮助它的父母保护领地。",
+"有一天，一群邪恶的巨龙入侵了飞龙宝宝的家园。",
+"飞龙宝宝的父母正在外面执行任务，所以飞龙宝宝是唯一在家的龙。",
+"它毫不犹豫地站出来保护自己的家园。",
+"它用它的翅膀和牙齿攻击敌人，但是它太小了，无法抵抗这么多敌人。",
+"正当飞龙宝宝快要支持不住的时候，它的父母回来了。",
+"它们立刻加入了战斗，把敌人打得落花流水。",
+"最终，他们赢得了这场战斗的胜利。"
+];
+var 哥布林 = 
+[
+"哥布林的故事",
+"哥布林是一种小型的人形生物，它们生活在森林和山脉中。",
+"它们有着绿色的皮肤和大眼睛，身上长着长长的毛发。",
+"它们的力量不大，但是它们非常聪明，善于利用环境和资源。",
+"哥布林最喜欢的事情就是挖掘宝藏。",
+"它们会在森林和山脉中寻找古老的遗迹和宝藏，然后把它们挖出来。",
+"它们会用宝藏中的财富来购买各种物品，例如武器、盔甲和食物。",
+"哥布林也是出色的工匠和建筑师。",
+"它们会用宝藏中的材料来建造自己的家园和城堡，然后用它们来保护自己和其他哥布林。",
+"它们还会制造各种工具和武器，例如剑、弓和斧头。",
+"尽管哥布林很聪明，但是它们也有一个致命的弱点：它们非常贪婪。",
+"它们会不择手段地获取财富和资源，甚至会攻击其他种族，例如人类和精灵。",
+"因此，很多种族都对哥布林保持着警惕和敌意。",
+"尽管如此，哥布林也有一些优点。",
+"它们非常勇敢，敢于面对强大的敌人。",
+"它们也很团结，会共同抵抗外敌。",
+"因此，有时候也有一些人类和精灵会与哥布林结盟，共同对抗更强大的敌人。"
+];
+
+
+function func1(){
+	if(cnt == 0){
+		document.getElementById('飞龙宝宝').style.color = "rgb(60, 179, 113)";
+	}
+	cnt++;
+	if(cnt % 飞龙宝宝.length == 0){
+		cnt = 0;
+		document.getElementById('飞龙宝宝').style.color = "red";
+	}
+	document.getElementById('飞龙宝宝').innerHTML = 飞龙宝宝[cnt];
+}
+function func2(){
+	if(cnt == 0){
+		document.getElementById('哥布林').style.color = "rgb(60, 179, 113)";
+	}
+	cnt++;
+	if(cnt % 哥布林.length == 0){
+		cnt = 0;
+		document.getElementById('哥布林').style.color = "red";
+	}
+	document.getElementById('哥布林').innerHTML = 哥布林[cnt];
+}
+</script>
+
+
+</html>

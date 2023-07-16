@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+
+<body>
+    <p id="location"></p>
+    <button onclick="location.assign('D:/programming/JavaScript/src/显示时间.html');">加载新的资源</button>
+</body>
+
+<script>
+    //window.location对象可以不带window前缀书写
+    var href = "URL:" + window.location.href;//URL
+    var hostName = "web主机的域名:" + (location.hostname == "" ? "无" : location.hostname);//web主机的域名
+    var pathName = "当前页面的路径或文件名:" + location.pathname;//当前页面的路径或文件名
+    var protocol = "当前使用的web协议:" + location.protocol;//当前使用的web协议
+    document.getElementById("location").innerHTML = href + "<br/>" + hostName + "<br/>" + pathName + "<br/>" + protocol;
+</script>
+
+</html>

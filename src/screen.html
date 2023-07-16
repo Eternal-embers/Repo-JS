@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.css" />
+<html>
+
+<body>
+    <i class="fa-solid fa-plus"></i>
+    <br />
+    <i class="fa-solid fa-xmark"></i>
+    <br />
+    <i class="fa-sharp fa-solid fa-left-right"></i>
+    <br />
+    <i class="fa-sharp fa-solid fa-up-down" onclick="alert('up-down')"></i>
+    <br />
+    <i class="fa-solid fa-compress"></i>
+    <br />
+    <i class="fa-solid fa-down-left-and-up-right-to-center" onclick="move()"></i>
+    <br />
+    <p id="height"></p>
+    <p id="width"></p>
+    <p id="availHeight"></p>
+    <p id="availWidth"></p>
+    <p id="colorDepth"></p>
+    <p id="pixelDepth"></p>
+</body>
+
+<script>
+    var w = window.innerWidth
+        || document.documentElement.clientWidth
+        || document.body.clientWidth;
+
+    var h = window.innerHeight
+        || document.documentElement.clientHeight
+        || document.body.clientHeight;
+
+    var obj1 = document.getElementById("height");
+    var obj2 = document.getElementById("width");
+    obj1.innerHTML = "浏览器的高度：" + h;
+    obj2.innerHTML = "浏览器的宽度：" + w;
+    document.getElementById("availWidth").innerHTML = "屏幕可用宽度：" + screen.availWidth;
+    document.getElementById("availHeight").innerHTML = "屏幕可用高度：" + screen.availHeight;
+    document.getElementById("colorDepth").innerHTML = "屏幕颜色深度：" + screen.colorDepth;
+    document.getElementById("pixelDepth").innerHTML = "屏幕像素深度:" + screen.pixelDepth;
+</script>
+
+</html>

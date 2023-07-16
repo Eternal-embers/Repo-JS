@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <span>账号：</span>
+    <input type="text" name="account" id="account" oninput=handleInput(event) placeholder="请输入账号">
+    <br /><br />
+    <span>密码：</span>
+    <input type="password" name="password" id="password" oninput=handleInput(event) placeholder="请输入密码">
+    <p id="obj">当前存储对象:localsession</p>
+    <button onclick="switchStorage()" id="sw">切换为sessionStorage对象</button>
+    <br /><br />
+    <button onclick="viewStorage()">查看存储信息</button>
+    <br /><br />
+    <button onclick="freeStorage()">清空存储信息</button>
+</body>
+<script>
+    var storage = localStorage;
+    function switchStorage() {
+        var sw = document.getElementById('sw');
+        var obj = document.getElementById('obj');
+        if (!confirm("是否切换存储对象为" + (storage == localStorage ? "sessionstorage" : "localstorage")))
+            return;
+        if (storage == localStorage) {
+            storage = sessionStorage;
+            sw.innerHTML = "切换为localstorage对象";
+            alert("存储对象将切换为sessionstorage对象");
+            obj.innerHTML = "当前存储对象:sessionstorage";
+        }
+        else {
+            storage = localStorage;
+            sw.innerHTML = "切换为sessionstorage对象";
+            alert("存储对象将切换为localStorage");
+            obj.innerHTML = "当前存储对象:localstorage";
+        }
+    }
+    function handleInput(event) {
+        var name = event.target.name;
+        const value = event.target.value;
+        storage.setItem(name, value);
+        alert("添加了存储信息：" + key + ":" + value);
+    }
+    function viewStorage() {
+        var info = "";
+        for (var i = 0; i < storage.length; i++) {
+            var key = storage.key(i);
+            info += key + ":" + storage.getItem(key) + "\n";
+        }
+        alert(info);
+    }
+    function freeStorage() {
+        var info = "";
+        for (var i = 0; i < storage.length; i++) {
+            var key = storage.key(i);
+            info += key + ":" + storage.getItem(key) + "\n";
+
+        }
+        alert("清空了以下存储信息：\n" + info);
+        storage.clear();//清空所有键
+    }
+</script>
+
+</html>
