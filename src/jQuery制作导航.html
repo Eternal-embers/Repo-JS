@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<head>
+    <script type="text/javascript" src="./jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #sidebar {
+            display: block;
+            box-sizing: border-box;
+            margin: 2vh 1vw;
+            padding: 5vh 2vw;
+            text-align: center;
+            background: rgba(210, 210, 210, 0.3);
+            backdrop-filter: blur(3px);
+            border: 1px solid rgba(210, 210, 210, 1);
+            box-shadow: 1vw 2vh 2vw rgba(180, 180, 180, 0.8);
+            height: 80vh;
+            width: 8vw;
+            overflow: hidden;
+            z-index: 2;
+        }
+
+        #icon,
+        #content {
+            float: left;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 70vh;
+            z-index: 0;
+        }
+
+        #icon {
+            float: left;
+            width: 3vw;
+        }
+
+        #content {
+            align-items: self-start;
+            width: 8vw;
+        }
+
+        i {
+            display: block;
+            height: 2vw;
+            padding: 5vh 1vw;
+        }
+
+        li {
+            display: block;
+            list-style: none;
+            height: 2vw;
+            padding: 5vh 1vw;
+        }
+
+        i:hover,
+        li:hover {
+            transform: scale(1.2);
+            color: rgba(0, 130, 255, 1);
+        }
+    </style>
+</head>
+<html>
+
+<body>
+    <ul id="sidebar">
+        <div id="icon">
+            <i class="fa-solid fa-house"></i>
+            <i class="fa-solid fa-user"></i>
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <i class="fa-solid fa-download"></i>
+            <i class="fa-solid fa-gear"></i>
+        </div>
+
+        <div id="content">
+            <li>Home</li>
+            <li>user</li>
+            <li>search</li>
+            <li>download</li>
+            <li>setting</li>
+        </div>
+    </ul>
+
+    <script>
+        var flag = 0;
+        $("#icon").click(function () {
+            if (flag == 0) {
+                flag = 1;
+                $("#content").fadeIn();
+                $("#sidebar").animate({ width: "16vw" }, "slow");//过渡动画
+            }
+            else {
+                flag = 0;
+                $("#content").fadeOut();
+                $("#sidebar").animate({ width: "8vw" }, "slow");//过渡动画
+            }
+        });//加载目录
+    </script>
+</body>
+
+</html>
